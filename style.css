@@ -1,0 +1,72 @@
+
+
+
+
+
+
+
+
+
+/* this method is used to scroll items in x or y axis  */
+
+.container{
+    border: 2px solid red;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 33%;
+    overflow-x:scroll ;
+scroll-snap-type: x mandatory;
+scroll-padding: 1rem;
+}
+.container > *{
+    scroll-snap-align: start;
+}
+
+
+
+
+
+/* display: grid; */
+/* grid-template-columns: repeat(auto-fit,minmax(min(300px, 100%),1fr)); */
+/* now we shall fix the problem which causes due to minimum value overflow  */
+
+
+
+
+/* grid-template-columns: repeat(auto-fit,minmax(300px,500px)); */
+
+/* the minimum value should be describe in this way that when screen smaller than minimum value then items will be overflow from border */
+
+
+
+/* this method is very usefull for random width items */
+
+/* .container{
+    border: 2px solid red;
+    margin: auto;
+display: flex;
+flex-wrap: wrap;
+gap: 1em;}
+.container > *{
+    flex: 1;
+} */
+
+
+.container li{
+    list-style: none;
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+
+    border: 2px solid rgb(25, 24, 24);
+}
+
+
+/* 
+this method is used to make wrap elements
+.container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+} */
